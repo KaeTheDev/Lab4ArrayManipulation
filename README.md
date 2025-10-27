@@ -49,6 +49,9 @@ git clone https://github.com/KaeTheDev/Lab4ArrayManipulation
 
 3. Right-click the index.html file and choose "Open with Live Server" to preview it.
 
+
+-----
+
 ## REFLECTIONS
 
 1. How did array methods like push() and filter() help you manipulate data in this activity?
