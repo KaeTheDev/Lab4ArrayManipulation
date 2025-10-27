@@ -22,5 +22,25 @@ function displayList() {
 displayList()
 
 // Task 2: Filter and Search an Array
+function addItem(item) {
+    if(shoppingList.includes(item)) {
+        return "Item already in list"
+    }
+    shoppingList.push(item)
+}
+addItem("test")
+addItem("test")
+addItem("secondtest")
+addItem("secondtest")
+addItem("different")
+
+
+console.log(shoppingList)
+
+function filterItems(searchTerm) {
+    return shoppingList.filter(item => item.toLowerCase().includes(searchTerm.toLowerCase()))
+}
+
+console.log(filterItems("diff"))
 
 // Task 3: Render the List in the Browser
