@@ -44,3 +44,35 @@ function filterItems(searchTerm) {
 console.log(filterItems("diff"))
 
 // Task 3: Render the List in the Browser
+let list = []
+let itemInput = document.getElementById("itemInput")
+let addItem = document.getElementById("addItem")
+let removeItem = document.getElementById("removeItem")
+let itemList = document.getElementById("list")
+
+addItem.addEventListener("click", function() {
+    let item = itemInput.value
+
+    if(item === ""){
+        alert("Please enter an item")
+    return;
+    }
+
+    list.push(item);
+    renderList();
+    itemInput.value = "";
+})
+
+removeItem.addEventListener("click", function(){
+    list.pop();
+    renderList();
+})
+
+function renderList() {
+    itemList.innerHTML = ""
+    for(let i = 0; i < list.length; i++) {
+        let listItem = document.createElement("li")
+        listItem.innerText = list[i]
+        itemList.appendChild(listItem)
+    }
+}
