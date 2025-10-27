@@ -11,8 +11,15 @@ console.log(shoppingList)
 function removeLastItem(item) {
     shoppingList.pop(item)
 }
-console.log(removeLastItem())
+removeLastItem()
 console.log(shoppingList)
+
+function displayList() {
+    shoppingList.forEach(item => {
+        console.log(item)
+    }) 
+}
+displayList()
 
 // Task 2: Filter and Search an Array
 
